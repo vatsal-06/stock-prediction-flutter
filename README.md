@@ -1,5 +1,4 @@
 # Stoxight
-
 Your personal stock prediction assistant.
 
 ## Getting Started
