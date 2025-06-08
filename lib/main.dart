@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stockprediction/core/helpers/navigator.dart';
+import 'package:stockprediction/core/helpers/welcome.dart';
 import 'package:stockprediction/theme/app_pallete.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           thumbColor: WidgetStatePropertyAll(AppPallete.whiteOpac),
         ),
       ),
-      home: Navigation(),
+      home: WelcomeScreen(),
     );
   }
 }

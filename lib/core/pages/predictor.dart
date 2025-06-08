@@ -32,9 +32,9 @@ class _PredictorState extends State<Predictor> {
         backgroundColor: AppPallete.backgroundColor,
         actions: [
           IconButton(
-            icon: Icon(Icons.settings, color: AppPallete.whiteColor, size: 30),
+            icon: Icon(Icons.close, color: AppPallete.whiteColor, size: 30),
             onPressed: () {
-              // Handle settings button press
+              Navigator.pop(context);
             },
           ),
         ],

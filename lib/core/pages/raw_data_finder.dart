@@ -27,9 +27,9 @@ class _StockRawDataFinderState extends State<StockRawDataFinder> {
         backgroundColor: AppPallete.backgroundColor,
         actions: [
           IconButton(
-            icon: Icon(Icons.settings, color: AppPallete.whiteColor, size: 30),
+            icon: Icon(Icons.close, color: AppPallete.whiteColor, size: 30),
             onPressed: () {
-              // settings button press
+              Navigator.pop(context);
             },
           ),
         ],
@@ -101,15 +101,10 @@ class _StockRawDataFinderState extends State<StockRawDataFinder> {
                           }
 
                           YahooFinanceResponse response = snapshot.data!;
-                          final sortedCandles =
-                              List<YahooFinanceCandleData>.from(
-                                response.candlesData,
-                              )..sort((a, b) => b.date.compareTo(a.date));
                           return ListView.builder(
-                            itemCount: sortedCandles.length,
+                            itemCount: response.candlesData.length,
                             itemBuilder: (BuildContext context, int index) {
-                              YahooFinanceCandleData candleData =
-                                  sortedCandles[index];
+                              YahooFinanceCandleData candleData = response.candlesData[response.candlesData.length - 1 - index];
                               return _CandleCard(candleData);
                             },
                           );
