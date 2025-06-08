@@ -1,6 +1,6 @@
-# stockprediction
+# Stoxight
 
-A new Flutter project.
+Your personal stock prediction assistant.
 
 ## Getting Started
 
